@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      var life = { answer: 42 };
+      <!--      console.log(life);-->
+      console.log(structuredClone(life));
+      life.answer = 0;
+      <!--      console.log(life);-->
+      console.log(structuredClone(life));
+    </script>
+  </body>
+</html>

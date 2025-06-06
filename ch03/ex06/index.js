@@ -1,14 +1,14 @@
 export function slice(str, indexStart, indexEnd) {
   // indexStart と indexEnd がどちらも undefined の場合
   if (indexStart === undefined && indexEnd === undefined) {
-    return str.substring();
+    return str;
   }
-  // indexStart と indexEnd のうち片方が undefined の場合
+  // indexEnd が undefined の場合
   else if (indexEnd === undefined) {
     if (indexStart < 0) indexStart = str.length + indexStart;
     return str.substring(indexStart);
   }
-  // indexStart と indexEnd のどちらも undefined ではない場合
+  // indexStart と indexEnd のどちらも 値がある場合
   else {
     if (indexStart < 0) indexStart = str.length + indexStart;
     if (indexEnd < 0) indexEnd = str.length + indexEnd;
@@ -20,8 +20,8 @@ export function slice(str, indexStart, indexEnd) {
 }
 
 let str = "abcdefghijklmnopqrstuvwxyz";
-let n = 2;
-let m = NaN;
+let n = -50;
+let m = 0;
 
 console.log(n, m); // "abcdefghijklmnopqrstuvwxyz"
 console.log(slice(str, n, m)); // "Hello"

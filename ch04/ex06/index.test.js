@@ -12,14 +12,22 @@ resizeFunctions.forEach((resizeFn, index) => {
       expect(resizeFn({})).toEqual({ maxWidth: 600, maxHeight: 480 });
     });
     it(`${functionNames[index]}({ maxWidth: 1000 })`, () => {
-      expect(resizeFn({ maxWidth: 1000 })).toEqual({ maxWidth: 1000, maxHeight: 480 });
+      expect(resizeFn({ maxWidth: 1000 })).toEqual({
+        maxWidth: 1000,
+        maxHeight: 480,
+      });
     });
     it(`${functionNames[index]}({ maxHeight: 2000 })`, () => {
-      expect(resizeFn({ maxHeight: 2000 })).toEqual({ maxWidth: 600, maxHeight: 2000 });
+      expect(resizeFn({ maxHeight: 2000 })).toEqual({
+        maxWidth: 600,
+        maxHeight: 2000,
+      });
     });
     it(`${functionNames[index]}({ maxWidth: 1000, maxHeight: 2000 })`, () => {
-      expect(resizeFn({ maxWidth: 1000, maxHeight: 2000 })).toEqual({ maxWidth: 1000, maxHeight: 2000 });
+      expect(resizeFn({ maxWidth: 1000, maxHeight: 2000 })).toEqual({
+        maxWidth: 1000,
+        maxHeight: 2000,
+      });
     });
   });
 });
-

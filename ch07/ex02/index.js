@@ -1,8 +1,10 @@
 //以下の関数を繰り返し (for, while) や条件分岐 (if) を利用せず map, filter, reduce, forEach 等のメソッドを利用して書き直しなさい。
 
 function fizzbuzz_after(n) {
-  // 配列の初期化(Array.from()の第一引数で配列のサイズを指定、第二引数でインデックスを配列の値として格納)
-  const array = Array.from({ length: n }, (_, i) => i + 1);
+  // 1~nの配列を作成(Array.from()の第一引数で配列のサイズを指定、第二引数でインデックスを配列の値として格納)
+  const array = Array.from({ length: n }, (_, i) => i + 1);  //かなり特殊な書き方
+  const array = Array(n).fill().map((_, i) => i + 1); //こんな書き方もある
+  const array = [...Array(n)].map((_, i) => i + 1); //こんな書き方もある
 
   // map()を使ってfizzbuzzを実行した配列newArrayを作成
   const newArray = array.map(

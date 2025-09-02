@@ -71,6 +71,7 @@ export function hashStringToInt(key, capacity) {
   let hash = 0;
   for (let i = 0; i < key.length; i++) {
     hash += key.charCodeAt(i);  // 各文字のコードポイントを加算してハッシュ値を計算
+    //実際に使用されるハッシュ関数は31や37などの素数を使用することが多い 調べてみて
   }
   return hash % capacity;  // ハッシュ値を容量で割った余りを返す (容量以下の整数に変換)
 }

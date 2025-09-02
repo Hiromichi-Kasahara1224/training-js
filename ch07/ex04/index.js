@@ -11,7 +11,7 @@ const data = [
 ];
 
 // 1. mathの全員の合計点
-const sumMath = data.reduce((x, y) => x + y.math, 0);
+const sumMath = data.reduce((x, y) => x + y.math, 0); //x: これまでの結果, y: 現在の要素, 初期値0
 
 // 2. クラスAのchemistryの平均点
 let n = 0;

@@ -30,6 +30,24 @@ data.sort((a,b)=>{
   }else if(a.geography < b.geography){
       return 1;
   }
+
+  // 全て同じ場合はそのまま
+  return 0;
 })
+
+//以下のような書き方もある
+
+//data.sort((a, b) => {
+//    if (b.math !== a.math) {
+//        return b.math - a.math;
+//    } else if (b.chemistry !== a.chemistry) {
+//        return b.chemistry - a.chemistry;
+//    } else {
+//        return b.geography - a.geography;
+//    }
+//});
+
+//data.sort((a, b) => b.math - a.math || b.chemistry - a.chemistry || b.geography - a.geography ); // 複数の条件を一度に比較する方法 //一番きれいな書き方
+//data.sort((a, b) => b.geography - a.geography).sort((a, b) => b.chemistry - a.chemistry).sort((a, b) => b.math - a.math);  //安定ソートでないと同じ結果にならない
 
 console.log(data);

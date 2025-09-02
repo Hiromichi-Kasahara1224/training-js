@@ -3,7 +3,7 @@ export function assign(target, ...sources) {
     throw new TypeError('Cannot convert undefined or null to object');
   }
 
-  const result = Object(target); // targetをオブジェクトに変換
+  const result = Object(target); // targetがオブジェクトでない場合のため、オブジェクトに変換
 
   for (const source of sources) {
     if (source != null) {

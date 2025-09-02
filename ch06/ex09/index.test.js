@@ -1,4 +1,5 @@
-import { jest } from "@jest/globals";
+import { jest } from "@jest/globals";  //これを入れないと実行できない
+//もしくはコマンドで npx jest?
 
 test("test", () => {
   const mock = jest.fn();
@@ -37,5 +38,6 @@ test("test", () => {
   obj.x = 1;
   obj.y = 2;
   expect(JSON.stringify(obj)).toBe(`{"x":1,"y":2,"sum":3}`);
+  // そのままだと {"x":1,"y":2} が出る
   expect(mock).toHaveBeenCalled();
 });

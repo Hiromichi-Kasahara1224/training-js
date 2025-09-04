@@ -33,4 +33,3 @@ const safeJsonParse = catching(JSON.parse, (e) => {
 
 console.log(safeJsonParse('{"a": 1}'));        // => { a: 1 }
 console.log(safeJsonParse("{Invalid Json}"));  // => { error: "SyntaxError: ..." }
-

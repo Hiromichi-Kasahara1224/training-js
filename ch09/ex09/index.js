@@ -58,4 +58,3 @@ class PaymentProcessor {
 const creditCard = new CreditCardPayment(); // creditCardのインスタンスを生成
 const processor = new PaymentProcessor(); // 支払い処理クラスのインスタンスを生成
 processor.processPayment(creditCard); // クレジットカードで支払い処理
-

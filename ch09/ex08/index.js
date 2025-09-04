@@ -13,14 +13,14 @@ export const Action = Object.freeze({
   STOP_ALARM: Symbol("stopAlarm"), // アラームを止める
 });
 
-// 関数型プログラミングで改良
+/********************関数型プログラミングで改良********************/
 // アラーム設定イベント
-export function setAlarm(state) {
+export function setAlarm(state) { //前回の状態を引数として受け取る
   switch (state) {
-    case State.NORMAL:
-      return { nextState: State.ALARM_SET, action: Action.NONE };
+    case State.NORMAL: //通常状態のとき
+      return { nextState: State.ALARM_SET, action: Action.NONE }; //次の状態はアラームセット中、アクションはなし
     default:
-      return { nextState: state, action: Action.NONE };
+      return { nextState: state, action: Action.NONE }; //それ以外の場合、状態は引き継がれ、アクションはなし
   }
 }
 

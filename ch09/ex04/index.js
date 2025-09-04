@@ -13,12 +13,12 @@ export class Warrior_c {
 // 魔法戦士クラス
 export class MagicWarrior_c extends Warrior_c {
   constructor(atk, mgc) {
-    super(atk); // Warrior_cのコンストラクタを呼び出す
+    super(atk); // 親クラスのコンストラクタを呼び出す
     this.mgc = mgc;
   }
 
   attack() {
-    return super.attack() + this.mgc;
+    return super.attack() + this.mgc; // 親クラスのattackメソッドを呼び出す
   }
 }
 

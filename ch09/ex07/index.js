@@ -9,27 +9,27 @@ export class LinkedList {
 
   push(value) {
     const newNode = { value, next: null };
-    if (!this.#head) {
-      this.#head = newNode;
-      this.#tail = newNode;
-    } else {
-      this.#tail.next = newNode;
-      this.#tail = newNode;
+    if (!this.#head) { // リストが空の場合
+      this.#head = newNode; // 新しいノードをheadに設定
+      this.#tail = newNode; // 新しいノードをtailに設定
+    } else { // リストに要素がある場合
+      this.#tail.next = newNode; // 既存の最後のノードのnextを新しいノードに設定
+      this.#tail = newNode; // 新しいノードを最後のノードとして設定
     }
   }
 
   pushAll(...items) {
-    items.forEach((item) => this.push(item));
+    items.forEach((item) => this.push(item)); // 各アイテムをpushメソッドで追加
   }
 
   toString() {
     let current = this.#head;
     const values = [];
     while (current) {
-      values.push(current.value);
-      current = current.next;
+      values.push(current.value); // ノードの値を配列に追加
+      current = current.next;  // 次のノードに移動
     }
-    return "[" + values.join(", ") + "]";
+    return "[" + values.join(", ") + "]"; // 配列を文字列に変換して返す
   }
 }
 
@@ -42,7 +42,7 @@ export class InstrumentedLinkedList {
 
   // 追加部分(コンストラクタ)
   constructor() {
-    this.#list = new LinkedList();
+    this.#list = new LinkedList();  // 合成 (クラスの中に別のクラスのインスタンスを持つ)
   }
 
   /**

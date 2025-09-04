@@ -1,4 +1,4 @@
-// 引数は2つのため括弧必要
+// 引数は2つのため丸括弧必要
 // 関数本体がreturn文だけではないのでreturn,中括弧,セミコロン省略不可
 export const array_C = (n,c) => {
     let result = [];
@@ -9,7 +9,7 @@ export const array_C = (n,c) => {
     return result;
 }
 
-// 引数は1つのため、括弧は不要
+// 引数は1つのため、丸括弧は不要
 // 関数本体がreturn文だけのため、returnとセミコロン、中括弧は省略可能
 // prettier-ignore
 export const square = x => x * x

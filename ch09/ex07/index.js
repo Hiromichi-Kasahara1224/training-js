@@ -1,3 +1,4 @@
+// LinkedListクラスの実装
 export class LinkedList {
   #head = null;
   #tail = null;
@@ -33,9 +34,8 @@ export class LinkedList {
   }
 }
 
-/**
- * 要素のpush回数を記録するLinkedList
- */
+// これ以下を修正
+// 要素のpush回数を記録するLinkedList
 export class InstrumentedLinkedList {
   #list; // 追加部分
   #pushCount = 0;

@@ -9,7 +9,7 @@ export class C {
     return 2;
   }
 
-  // 静的プロパティとしてクラスCを定義 C.C
+  // 静的プロパティとしてクラスCを定義 C.
   static C = class {
     // 静的メソッドはコンストラクタに対して呼び出されるから、C.C.method()
     static method() {
@@ -22,14 +22,14 @@ export class C {
     }
   };
 
-  // インスタンスプロパティなので、new C().C
+  // インスタンスプロパティなので、new C().
   C = class {
     // 静的メソッドはコンストラクタに対して呼び出されるから、new C().C.method()
     static method() {
       return 5;
     }
 
-    // インスタンスメソッドなので、new C().C().method()
+    // インスタンスメソッドなので、new new C().C().method()
     method() {
       return 6;
     }

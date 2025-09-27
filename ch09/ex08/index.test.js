@@ -8,6 +8,8 @@ import {
   elapseSnoozeTime,
 } from "./index.js";
 
+// パラメタライズドテストを使うべきかも
+
 describe("Alarm Clock State Transitions", () => {
   test("通常 → アラーム設定 → アラームセット中", () => {
     const { nextState, action } = setAlarm(State.NORMAL);
